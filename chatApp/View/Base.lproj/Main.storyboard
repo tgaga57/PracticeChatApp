@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="bQ7-ki-Fwe">
             <objects>
-                <viewController id="99U-VY-qdI" sceneMemberID="viewController">
+                <viewController id="99U-VY-qdI" customClass="RegisterViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ScI-sO-Wp5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,9 @@
                                 <state key="normal" title="新規登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerNewUser:" destination="99U-VY-qdI" eventType="touchUpInside" id="5pO-WB-39v"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCA-gi-PZ4">
                                 <rect key="frame" x="68" y="161" width="238" height="34"/>
@@ -107,6 +110,10 @@
                         <viewLayoutGuide key="safeArea" id="aFX-Cl-d48"/>
                     </view>
                     <navigationItem key="navigationItem" id="VVW-HR-FWO"/>
+                    <connections>
+                        <outlet property="emailTextFiled" destination="uCA-gi-PZ4" id="HJk-Xz-dbn"/>
+                        <outlet property="passwordTextFiled" destination="NZ3-Zb-7Ol" id="nZV-je-Voc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCi-xW-Rsc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

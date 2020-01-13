@@ -14,6 +14,7 @@
 		B1A2D8FD23CC56D900ED2E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A2D8FB23CC56D900ED2E56 /* Main.storyboard */; };
 		B1A2D8FF23CC56D900ED2E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A2D8FE23CC56D900ED2E56 /* Assets.xcassets */; };
 		B1A2D90223CC56D900ED2E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A2D90023CC56D900ED2E56 /* LaunchScreen.storyboard */; };
+		B1A2D90D23CCC56B00ED2E56 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2D90C23CCC56B00ED2E56 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B1A2D8FE23CC56D900ED2E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1A2D90123CC56D900ED2E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1A2D90323CC56D900ED2E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A2D90C23CCC56B00ED2E56 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D3BEDA8109B7BC0439684A9C /* Pods_chatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AA0002D80B89894E851352 /* Pods-chatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatApp.release.xcconfig"; path = "Target Support Files/Pods-chatApp/Pods-chatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				B1A2D8F523CC56D800ED2E56 /* AppDelegate.swift */,
 				B1A2D8F723CC56D800ED2E56 /* SceneDelegate.swift */,
 				B1A2D8F923CC56D900ED2E56 /* ViewController.swift */,
+				B1A2D90C23CCC56B00ED2E56 /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B1A2D8FA23CC56D900ED2E56 /* ViewController.swift in Sources */,
 				B1A2D8F623CC56D800ED2E56 /* AppDelegate.swift in Sources */,
 				B1A2D8F823CC56D800ED2E56 /* SceneDelegate.swift in Sources */,
+				B1A2D90D23CCC56B00ED2E56 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
