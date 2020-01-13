@@ -113,6 +113,7 @@
                     <connections>
                         <outlet property="emailTextFiled" destination="uCA-gi-PZ4" id="HJk-Xz-dbn"/>
                         <outlet property="passwordTextFiled" destination="NZ3-Zb-7Ol" id="nZV-je-Voc"/>
+                        <segue destination="E9v-ZW-H3Z" kind="show" identifier="chat" id="lkr-9l-UZX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCi-xW-Rsc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -122,7 +123,7 @@
         <!--ログイン-->
         <scene sceneID="CY8-tt-HkX">
             <objects>
-                <viewController id="9sD-02-J6F" sceneMemberID="viewController">
+                <viewController id="9sD-02-J6F" customClass="LoginViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PlQ-HE-2v6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,14 +138,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czo-Uc-fdk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czo-Uc-fdk">
                                 <rect key="frame" x="68" y="260" width="238" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                 <state key="normal" title="ログイン">
-                                    <color key="titleColor" red="0.19811857199999999" green="1" blue="0.99723060750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="9sD-02-J6F" eventType="touchUpInside" id="8m2-Er-Dp6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzk-hg-wAa">
                                 <rect key="frame" x="68" y="172" width="238" height="34"/>
@@ -159,10 +163,31 @@
                     <navigationItem key="navigationItem" title="ログイン" id="ntk-c3-NCJ">
                         <barButtonItem key="backBarButtonItem" title="Chat App" id="Aqz-4S-raN"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextfiled" destination="Lqd-GW-SOm" id="UrF-Aq-6NZ"/>
+                        <outlet property="passwordTextfiled" destination="Mzk-hg-wAa" id="VQm-Ic-2mO"/>
+                        <segue destination="E9v-ZW-H3Z" kind="show" identifier="chat" id="mOl-nk-sFq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5B-lD-h2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2160.8000000000002" y="-182.15892053973016"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="ALM-qf-Ey5">
+            <objects>
+                <viewController id="E9v-ZW-H3Z" customClass="ChatViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rnf-ac-hai">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Aee-Os-Iyj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VkV-U1-7wT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="By6-ia-W49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="452"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CQf-5c-iSm">
@@ -189,4 +214,7 @@
         <image name="119a98f6ee25853c0f77cd9a32502726_s" width="452" height="640"/>
         <image name="83c8c9d18cf69b270a8c770d93dcbed1_s" width="640" height="427"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mOl-nk-sFq"/>
+    </inferredMetricsTieBreakers>
 </document>

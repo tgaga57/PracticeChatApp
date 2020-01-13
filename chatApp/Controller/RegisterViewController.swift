@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController {
                 self.startAnimation()
                 
                 // 画面をチャット画面に遷移させる
-                
+                self.performSegue(withIdentifier: "chat", sender: nil)
                 
             }
           
