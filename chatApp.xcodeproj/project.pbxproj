@@ -17,7 +17,6 @@
 		B1A2D90D23CCC56B00ED2E56 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2D90C23CCC56B00ED2E56 /* RegisterViewController.swift */; };
 		B1A2D90F23CCD3CB00ED2E56 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2D90E23CCD3CB00ED2E56 /* ChatViewController.swift */; };
 		B1A2D91123CCD5F200ED2E56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2D91023CCD5F200ED2E56 /* LoginViewController.swift */; };
-		B1A2D91323CCD79000ED2E56 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2D91223CCD79000ED2E56 /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		B1A2D90C23CCC56B00ED2E56 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B1A2D90E23CCD3CB00ED2E56 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B1A2D91023CCD5F200ED2E56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B1A2D91223CCD79000ED2E56 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		D3BEDA8109B7BC0439684A9C /* Pods_chatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AA0002D80B89894E851352 /* Pods-chatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatApp.release.xcconfig"; path = "Target Support Files/Pods-chatApp/Pods-chatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +98,6 @@
 		B1A2D90923CC723D00ED2E56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B1A2D91223CCD79000ED2E56 /* Animation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				B1A2D8F623CC56D800ED2E56 /* AppDelegate.swift in Sources */,
 				B1A2D8F823CC56D800ED2E56 /* SceneDelegate.swift in Sources */,
 				B1A2D90F23CCD3CB00ED2E56 /* ChatViewController.swift in Sources */,
-				B1A2D91323CCD79000ED2E56 /* Animation.swift in Sources */,
 				B1A2D90D23CCC56B00ED2E56 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
