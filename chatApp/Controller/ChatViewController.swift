@@ -116,9 +116,14 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
         cell.messageLabel.text = chatArray[indexPath.row].message
+        
+        // ラベルの角を丸く
+        cell.messageLabel.layer.cornerRadius = 20
+        cell.messageLabel.layer.masksToBounds = true
+        
         cell.userNameLabel.text = chatArray[indexPath.row].sender
         cell.iconImageView.image = UIImage(named: "Nohuman")
         
@@ -138,6 +143,11 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
+    // セルの高さを返すもの
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return view.frame.size.height / 10
+    }
     
     
     @IBAction func sendAction(_ sender: Any) {
@@ -145,6 +155,13 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         messageTextFiled.endEditing(true)
         messageTextFiled.isEnabled = false
         sendButton.isEnabled = false
+        
+        if messageTextFiled.text!.count > 15 {
+            print("十五文字以上ですよ")
+            
+            return
+        }
+        
         
         // 参照元を提示
         let chatDB = Database.database().reference().child("chats")
