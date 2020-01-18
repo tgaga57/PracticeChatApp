@@ -51,6 +51,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
         // firebaseからデータをfetchしてくる(取得のこと)
+        fetchChatData()
         
     }
     
