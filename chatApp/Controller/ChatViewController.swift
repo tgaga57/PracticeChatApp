@@ -119,10 +119,17 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.userNameLabel.text = chatArray[indexPath.row].sender
         cell.iconImageView.image = UIImage(named: "Nohuman")
         
-        // 色を決める
-        cell.messageLabel.backgroundColor = UIColor.flatLime()
-        
-        if cell.userNameLabel.text == Autho
+
+        // もしauthのCurentuser（自分）のemailアドレスだったら
+        if cell.userNameLabel.text == Auth.auth().currentUser?.email as! String {
+            // 色を決める
+            cell.messageLabel.backgroundColor = UIColor.flatLime()
+            
+        }else{
+            
+            cell.messageLabel.backgroundColor = UIColor.flatPink()
+            
+        }
         
         return cell
         
