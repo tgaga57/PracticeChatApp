@@ -202,6 +202,9 @@
                                 <rect key="frame" x="320" y="616" width="55" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="icons8-メールを送信-96"/>
+                                <connections>
+                                    <action selector="sendAction:" destination="E9v-ZW-H3Z" eventType="touchUpInside" id="k0p-YR-B6O"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySP-M8-ccy">
                                 <rect key="frame" x="16" y="626" width="296" height="34"/>
@@ -217,6 +220,7 @@
                     <navigationItem key="navigationItem" id="VkV-U1-7wT"/>
                     <connections>
                         <outlet property="messageTextFiled" destination="ySP-M8-ccy" id="eja-ew-Nr5"/>
+                        <outlet property="sendButton" destination="kG6-3l-82Z" id="doE-q2-87g"/>
                         <outlet property="tableView" destination="Vfu-yL-gJD" id="N6a-k3-Zqg"/>
                     </connections>
                 </viewController>

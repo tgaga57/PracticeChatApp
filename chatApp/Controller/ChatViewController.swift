@@ -23,6 +23,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     var chatArray = [Message]()
     
+    // 送信ボタン
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,6 +136,62 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
         
     }
+    
+    
+    
+    @IBAction func sendAction(_ sender: Any) {
+        // メッサージの入力が終わっているから
+        messageTextFiled.endEditing(true)
+        messageTextFiled.isEnabled = false
+        sendButton.isEnabled = false
+        
+        // 参照元を提示
+        let chatDB = Database.database().reference().child("chats")
+        
+     //  キーバリュー型で内容を送信
+        let messageInfo = ["sender":Auth.auth().currentUser?.email,"message":messageTextFiled.text!]
+        
+        // chatDBに入れる
+        chatDB.childByAutoId().setValue(messageInfo) { (error,result) in
+            
+            if error != nil {
+                print("エラーでした")
+            }else {
+               print("送信完了")
+                self.messageTextFiled.isEnabled = true
+                self.sendButton.isEnabled = true
+                self.messageTextFiled.text = ""
+            }
+            
+        }
+    }
+    
+    
+    // データの受信　引っ張ってくるのか
+    func fetchChatData() {
+        
+        // どこからデータを引っ張ってくるのか
+        let fethchDataRef = Database.database().reference().child("chats")
+        
+        // 新しい更新があったときだけ取得したい取得したい
+        fethchDataRef.observe(.childAdded) { (snapShot) in
+            
+            let snapShotData = snapShot.value as! AnyObject
+            let text = snapShotData.value(forKey: "message")
+            let sender = snapShotData.value(forKey: "sender")
+            
+            let message = Message()
+            message.message = text as! String
+            message.sender = sender as! String
+            
+            self.chatArray.append(message)
+            self.tableView.reloadData()
+            
+            
+        }
+    }
+    
+    
     
     
 }
