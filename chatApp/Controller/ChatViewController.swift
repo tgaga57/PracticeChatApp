@@ -29,6 +29,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print ("ここまできましたr")
         // このtableViewControllerで使うことを表記
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,7 +38,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         messageTextFiled.delegate = self
         
         
-        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         tableView.rowHeight = UITableView.automaticDimension
         
@@ -146,7 +147,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     // セルの高さを返すもの
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return view.frame.size.height / 10
+        return 100
+        
     }
     
     
