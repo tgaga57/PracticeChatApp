@@ -23,7 +23,7 @@
                                     <color key="titleColor" red="1" green="0.84236281589999995" blue="0.86989914420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="99U-VY-qdI" kind="show" id="vjw-he-30E"/>
+                                    <segue destination="99U-VY-qdI" kind="show" identifier="chat" id="vjw-he-30E"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="119a98f6ee25853c0f77cd9a32502726_s" translatesAutoresizingMaskIntoConstraints="NO" id="KST-a0-imd">
@@ -182,14 +182,47 @@
                     <view key="view" contentMode="scaleToFill" id="rnf-ac-hai">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-yL-gJD">
+                                <rect key="frame" x="0.0" y="44" width="375" height="550"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="JRj-Ov-slU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JRj-Ov-slU" id="Eqa-LX-H5B" customClass="CustomCell" customModule="chatApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-3l-82Z">
+                                <rect key="frame" x="320" y="616" width="55" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icons8-メールを送信-96"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySP-M8-ccy">
+                                <rect key="frame" x="16" y="626" width="296" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94595662019716686" blue="0.80740947176038558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Aee-Os-Iyj"/>
                     </view>
                     <navigationItem key="navigationItem" id="VkV-U1-7wT"/>
+                    <connections>
+                        <outlet property="messageTextFiled" destination="ySP-M8-ccy" id="eja-ew-Nr5"/>
+                        <outlet property="tableView" destination="Vfu-yL-gJD" id="N6a-k3-Zqg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="By6-ia-W49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3306" y="452"/>
+            <point key="canvasLocation" x="3304.8000000000002" y="451.12443778110946"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CQf-5c-iSm">
@@ -215,6 +248,7 @@
         <image name="0d9d0cffe2f97f30cfbf2e9169c043ba_s" width="640" height="640"/>
         <image name="119a98f6ee25853c0f77cd9a32502726_s" width="452" height="640"/>
         <image name="83c8c9d18cf69b270a8c770d93dcbed1_s" width="640" height="427"/>
+        <image name="icons8-メールを送信-96" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lkr-9l-UZX"/>
